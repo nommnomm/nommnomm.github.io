@@ -37,6 +37,7 @@
 	}
 
 	body {
+		overflow-x: hidden;
 		line-height: 1;
 	}
 
@@ -2177,8 +2178,18 @@
 		border: 0;
 		display: inline-block;
 		position: relative;
+		object-fit: fill !important;
 	}
 
+	.long{
+		height: 250;
+		width:200;
+	}
+
+	.not-round{
+		border-radius: 0 !important;
+		margin: 0 0 2em 3em
+	}
 		.image img {
 			border-radius: 5px;
 			display: block;
@@ -3657,7 +3668,6 @@
 				.wrapper.spotlight .image img {
 					border-radius: 100%;
 					width: 100%;
-					object-fit: contain;
 				}
 
 			.wrapper.spotlight .content {
@@ -4116,7 +4126,7 @@
 	.cake_bottom2 {
 		position: absolute;
 		width: 320px;
-		bottom: 7px;
+		bottom: 0px;
 		background: #cd7a1c;
 		height: 22px;
 		right: 5px;
@@ -4131,7 +4141,7 @@
 		background: #744c28;
 		position: absolute;
 		width: 310px;
-		bottom: 29px;
+		bottom: 22px;
 		right: 10px;
 		border-radius: 5px 5px 0px 0px;
 		left: 10px;
@@ -4142,7 +4152,7 @@
 		background: #ffb009;
 		position: absolute;
 		width: 230px;
-		bottom: 89px;
+		bottom: 77px;
 		right: 50px;
 		border-radius: 5px 5px 0px 0px;
 		left: 50px;
@@ -4154,7 +4164,7 @@
 		background: #744c28;
 		position: absolute;
 		width: 140px;
-		bottom: 138px;
+		bottom: 123px;
 		border-radius: 5px 5px 0px 0px;
 		left: 0px;
 		right: 0px;
@@ -4738,15 +4748,12 @@
 		o-transition: all 0.3s ease-in-out;
 	}
 	.giftcard {
-		border-radius: 5px;
-		background-image: url(http://target.scene7.com/is/image/Target/13391702?wid=450&hei=450&fmt=pjpeg);
-		background-size: 110%;
-		box-shadow: 0px 1px 0px 1px #fee4c0;
+		background-image: url(../../assets/images/music_icon.png);
+		background-size: 100%;
+		
 		padding: 10px;
 		width: 80px;
 		height: 82px;
-		font-size: 15px;
-	font-family: 'Source Sans Pro', sans-serif;
 		color: white;
 		left: 0px;
 		top: 100px;
@@ -4768,9 +4775,10 @@
 	.one_number {
 		position: absolute;
 		left: 160px;
-		top: 25px;
+		top: 40px;
 		width: 9px;
 	}
+	/* above */
 	.one_number:after {
 		content: "";
 		height: 5px;
@@ -4780,6 +4788,7 @@
 		top: 0px;
 		left: 0px;
 	}
+	/* below */
 	.one_number:before {
 		content: "";
 		height: 25px;
@@ -4792,7 +4801,7 @@
 	.seven_number {
 		position: absolute;
 		right: 147px;
-		top: 25px;
+		top: 40px;
 		width: 14px;
 	}
 	.seven_number:after {
@@ -5036,4 +5045,14 @@
 	.video-circle {
 		border-radius: 50%;
 		object-fit: cover;
-		}
+	}
+
+	::-webkit-scrollbar {
+		width: 5px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: #EDF259;
+	  }
+
+		
