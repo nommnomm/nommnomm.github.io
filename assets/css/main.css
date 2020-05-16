@@ -2186,6 +2186,14 @@
 		width:200;
 	}
 
+	.xlarge{
+		font-size: x-large;
+		display: inline;
+		text-align: center;
+		padding:0.5em
+	}
+
+
 	.not-round{
 		border-radius: 0 !important;
 		margin: 0 0 2em 3em
